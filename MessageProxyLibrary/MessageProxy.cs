@@ -14,7 +14,7 @@ namespace MessageProxyLibrary
     public class MessageProxy<T> : RealProxy where T : class
     {
         private readonly T _target;
-        private SingleThreadWorker _worker;
+        private readonly SingleThreadWorker _worker;
 
         public MessageProxy(T target) : base(typeof(T))
         {
